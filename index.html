@@ -33,12 +33,16 @@
             
             pick_arr[i] = Math.round(Math.random() * 48 + 1);
 
-            while ((i > 0) && (pick_arr[i] == pick_arr[i-1])) {
+            for (j = i - 1; j >= 0; j--) {
+                if (i > 0) {
+                    while (pick_arr[i] == pick_arr[j]) {
             
-                pick_arr[i] = Math.round(Math.random() * 48 + 1);
+                        pick_arr[i] = Math.round(Math.random() * 48 + 1);
+
+                    }
+                }
 
             }
-            
 
         }
         
